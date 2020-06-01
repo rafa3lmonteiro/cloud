@@ -1,0 +1,82 @@
+{
+  "input_datatypes": [],
+  "output_datatype": "content_template_output",
+  "input_groups": [
+    {
+      "name": "virtualmachine",
+      "label": "Virtual Machine Input Variables"
+    },
+    {
+      "name": "cloud",
+      "label": "Cloud Input Variables"
+    },
+    {
+      "name": "ssh_keys",
+      "label": "SSH Keys"
+    },
+    {
+      "name": "image_parameters",
+      "label": "Image Parameters"
+    }
+  ],
+  
+  "output_groups": [
+    {
+      "name": "content_template_output",
+      "label": "Outputs"
+    }
+  ],
+  "template_input_params": [
+    {
+      "name": "ambiente",
+      "type": "string",
+      "description": "Seleciona ambiente",
+      "hidden": false,
+      "label": "Seleciona ambiente",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine",
+      "options": [
+        { "value": "dev-pfl2", "label": "dev-pfl2" },
+        { "value": "th-pfl2", "label": "th-pfl2" },
+        { "value": "th-pjl2", "label": "th-pjl2" },
+        { "value": "ti-pfl2", "label": "ti-pfl2" },
+        { "value": "ti-pjl2", "label": "ti-pjl2" },
+        { "value": "tu-pfl2", "label": "tu-pfl2" },
+        { "value": "tu-pjl2", "label": "tu-pjl2" },
+        { "value": "prod-pfl2", "label": "prod-pfl2" },
+        { "value": "prod-pjl2", "label": "prod-pjl2" },
+        { "value": "ha-pfl2", "label": "ha-pfl2" },
+        { "value": "ha-pjl2", "label": "ha-pjl2" },
+        { "value": "prod-corp", "label": "prod-corp" },
+        { "value": "ha-corp", "label": "ha-corp" },
+        { "value": "estruturais", "label": "estruturais" }
+      ]
+    },
+    {
+      "name": "vm_1_name",
+      "type": "string",
+      "description": "Hostname of virtual machine",
+      "default": "Hostname of virtual machine",
+      "hidden": false,
+      "label": "Hostname of virtual machine",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    }
+    
+  ],
+  "template_output_params": [
+    {
+      "name": "ip_address",
+      "type": "string",
+      "description": "IP gerado pelo IPAM",
+      "hidden": false,
+      "label": "IP gerado pelo IPAM",
+      "secured": false,
+      "group_name": "content_template_output"
+    }
+  ]
+}
