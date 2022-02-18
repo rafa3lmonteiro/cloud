@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 var icp_host = "10.199.103.140:8443";
 var cam_host = "10.199.103.139:30000";
 var cam_user = "admin";
-var cam_password = "Dqm60@vnc";
+var cam_password = "suasenha";
 //var cam_refresh_interval = process.env.CAM_REFRESH_CACHE_INTERVAL || 300000
 // e3032294-9f6f-4855-b8a2-a79b61006846 all 00001
 // let tenantId = process.env.CAM_TENANT_ID;
@@ -116,7 +116,7 @@ app.post('/icp-scale/api/v1/uc2/changenamespace', async function(req, res, next)
       namespace = data[1].replace("Namespace : ","");
       //console.log(bootnode_icp + "\n" + namespace);    // set the total number of lines to 2
 
-      let uc2namespace = await tasks.renameNamespace(bootnode_icp, "root", "T1h18rid@", namespace);
+      let uc2namespace = await tasks.renameNamespace(bootnode_icp, "root", "suasenha@", namespace);
     }
 
 
@@ -133,7 +133,7 @@ app.post('/icp-scale/api/v1/uc2/deletaservidor', async function(req, res, next){
       namespace = data[1].replace("Namespace : ","");
       //console.log(bootnode_icp + "\n" + namespace);    // set the total number of lines to 2
 
-      let uc2namespace = await tasks.renameNamespace(bootnode_icp, "root", "T1h18rid@", namespace);
+      let uc2namespace = await tasks.renameNamespace(bootnode_icp, "root", "suasenha@", namespace);
     }
 
 
