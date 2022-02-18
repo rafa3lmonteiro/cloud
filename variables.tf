@@ -1,3 +1,6 @@
+# Rafael Monteiro
+# edit 02/18/2022
+# variables.tf file
 ##############################################################
 # Keys - CAMC (public/private) & optional User Key (public) 
 ##############################################################
