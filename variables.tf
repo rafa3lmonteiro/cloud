@@ -74,20 +74,20 @@ variable "vm_1_domain" {
     type        = "map"
   description = "Domain Name of virtual machine"
   default     = {
-        dev-pfl2 = "homolog.ibm.cloud"
-        th-pfl2 = "homolog.ibm.cloud"
-        th-pjl2 = "homolog.ibm.cloud"
-        ti-pfl2 = "homolog.ibm.cloud"
-        ti-pjl2 = "homolog.ibm.cloud"
-        tu-pfl2 = "homolog.ibm.cloud"
-        tu-pjl2 = "homolog.ibm.cloud"
-        prod-pfl2 = "producao.ibm.cloud"
-        prod-pjl2 = "producao.ibm.cloud"
-        ha-pfl2 = "producao.ibm.cloud"
-        ha-pjl2 = "producao.ibm.cloud"
-        prod-corp = "producao.ibm.cloud"
-        ha-corp =  "producao.ibm.cloud"
-        estruturais = "homolog.ibm.cloud"
+        dev-pfl2 = "homolog.my.cloud"
+        th-pfl2 = "homolog.my.cloud"
+        th-pjl2 = "homolog.my.cloud"
+        ti-pfl2 = "homolog.my.cloud"
+        ti-pjl2 = "homolog.my.cloud"
+        tu-pfl2 = "homolog.my.cloud"
+        tu-pjl2 = "homolog.my.cloud"
+        prod-pfl2 = "producao.my.cloud"
+        prod-pjl2 = "producao.my.cloud"
+        ha-pfl2 = "producao.my.cloud"
+        ha-pjl2 = "producao.my.cloud"
+        prod-corp = "producao.my.cloud"
+        ha-corp =  "producao.my.cloud"
+        estruturais = "homolog.my.cloud"
   }
   
 }
@@ -129,20 +129,20 @@ variable "vm_1_dns_suffixes" {
     description = "Name resolution suffixes for the virtual network adapter"
     type        = "map"
     default     = {
-        dev-pfl2 = ["homolog.ibm.cloud"]
-        th-pfl2 = ["homolog.ibm.cloud"]
-        th-pjl2 = ["homolog.ibm.cloud"]
-        ti-pfl2 = ["homolog.ibm.cloud"]
-        ti-pjl2 = ["homolog.ibm.cloud"]
-        tu-pfl2 = ["homolog.ibm.cloud"]
-        tu-pjl2 = ["homolog.ibm.cloud"]
-        prod-pfl2 = ["producao.ibm.cloud"]
-        prod-pjl2 = ["producao.ibm.cloud"]
-        ha-pfl2 = ["producao.ibm.cloud"]
-        ha-pjl2 = ["producao.ibm.cloud"]
-        prod-corp = ["producao.ibm.cloud"]
-        ha-corp = ["producao.ibm.cloud"]
-        estruturais =  ["homolog.ibm.cloud"]
+        dev-pfl2 = ["homolog.my.cloud"]
+        th-pfl2 = ["homolog.my.cloud"]
+        th-pjl2 = ["homolog.my.cloud"]
+        ti-pfl2 = ["homolog.my.cloud"]
+        ti-pjl2 = ["homolog.my.cloud"]
+        tu-pfl2 = ["homolog.my.cloud"]
+        tu-pjl2 = ["homolog.my.cloud"]
+        prod-pfl2 = ["producao.my.cloud"]
+        prod-pjl2 = ["producao.my.cloud"]
+        ha-pfl2 = ["producao.my.cloud"]
+        ha-pjl2 = ["producao.my.cloud"]
+        prod-corp = ["producao.my.cloud"]
+        ha-corp = ["producao.my.cloud"]
+        estruturais =  ["homolog.my.cloud"]
   }
   
 }
