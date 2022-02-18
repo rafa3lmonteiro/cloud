@@ -3,7 +3,7 @@
 provider "phpipam" {
   app_id   = "caminteract"
   endpoint = "http://10.199.103.139/api"
-  password = "Dqm@50vnc"
+  password = "suasenha"
   username = "admin"
 }
 
@@ -51,7 +51,7 @@ provisioner "remote-exec" {
     connection {
        host = "${var.IP_Icp_Bootnode["${var.ambiente}"]}"
   	   user = "root"
-       password = "T1h18rid@"
+       password = "suasenha"
    }
   
     inline = [
@@ -213,7 +213,7 @@ resource "null_resource" "gera-chave-publica" {
     connection {
        host = "${var.IP_Icp_Bootnode["${var.ambiente}"]}"
        user = "root"
-       password = "T1h18rid@"
+       password = "suasenha@"
    }
   
     inline = [
@@ -231,7 +231,7 @@ resource "null_resource" "add-remote-sshkey-to-worker" {
     connection {
        host = "10.199.103.200"
        user = "root"
-       password = "T1h18rid@"
+       password = "suasenha@"
     }
   
   inline = [
@@ -250,7 +250,7 @@ depends_on = ["null_resource.add-remote-sshkey-to-worker"]
     connection {
        host = "${var.IP_Icp_Bootnode["${var.ambiente}"]}"
        user = "root"
-       password = "T1h18rid@"
+       password = "suasenha@"
    }
   
     inline = [
@@ -274,7 +274,7 @@ resource "null_resource" "run-script-onworker" {
     connection {
        host = "${phpipam_address.address.ip_address}"
        user = "root"
-       password = "T1h18rid@"
+       password = "suasenha@"
    }
   
     inline = [
@@ -293,7 +293,7 @@ resource "null_resource" "registrabdgc" {
     connection {
        host = "10.199.103.200"
        user = "root"
-       password = "T1h18rid@"
+       password = "suasenha@"
     }
   
   inline = [
