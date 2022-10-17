@@ -1,7 +1,6 @@
 //
 // # Rafael Monteiro
 // # edit 02/18/2022
-// # This is my example of terraform template
 // 
 
 var express = require('express');
