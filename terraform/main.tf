@@ -1,10 +1,10 @@
-# Rafael Monteiro
+# Rafael Conte Monteiro
 # edit 02/18/2022
 # 
 
 provider "phpipam" {
   app_id   = "caminteract"
-  endpoint = "http://10.199.103.139/api"
+  endpoint = "http://10.0.0.115/api"
   password = "suasenha"
   username = "admin"
 }
@@ -231,7 +231,7 @@ resource "null_resource" "add-remote-sshkey-to-worker" {
   depends_on = ["null_resource.gera-chave-publica"]
   provisioner "remote-exec" {
     connection {
-       host = "10.199.103.200"
+       host = "10.0.0.200"
        user = "root"
        password = "suasenha@"
     }
@@ -280,10 +280,10 @@ resource "null_resource" "run-script-onworker" {
    }
   
     inline = [
-      "mount 10.199.103.200:/admcloud/ /admcloud/",
+      "mount 10.0.0.200:/admcloud/ /admcloud/",
       "/admcloud/scripts/ajusta_rotas.sh",
       "sleep 60 ",
-      "mount 10.199.103.200:/admcloud/ /admcloud/",
+      "mount 10.0.0.200:/admcloud/ /admcloud/",
       "/admcloud/scripts/camworker/workernode_script.sh"
     ]
   }
@@ -293,7 +293,7 @@ resource "null_resource" "registrabdgc" {
   depends_on = ["null_resource.run-script-onworker"]
   provisioner "remote-exec" {
     connection {
-       host = "10.199.103.200"
+       host = "10.0.0.200"
        user = "root"
        password = "suasenha@"
     }

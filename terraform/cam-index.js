@@ -1,6 +1,6 @@
 //
-// # Rafael Monteiro
-// # edit 02/18/2022
+// # Rafael Conte Monteiro
+// # edit 11/15/2022
 // 
 
 var express = require('express');
@@ -19,8 +19,8 @@ var app = express();
 app.use(bodyParser.json());
 
 
-var icp_host = "10.199.103.140:8443";
-var cam_host = "10.199.103.139:30000";
+var icp_host = "10.0.0.100:8443";
+var cam_host = "10.0.0.110:30000";
 var cam_user = "admin";
 var cam_password = "suasenha";
 //var cam_refresh_interval = process.env.CAM_REFRESH_CACHE_INTERVAL || 300000

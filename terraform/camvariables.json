@@ -38,20 +38,20 @@
       "immutable": false,
       "group_name": "virtualmachine",
       "options": [
-        { "value": "dev-pfl2", "label": "dev-pfl2" },
-        { "value": "th-pfl2", "label": "th-pfl2" },
-        { "value": "th-pjl2", "label": "th-pjl2" },
-        { "value": "ti-pfl2", "label": "ti-pfl2" },
-        { "value": "ti-pjl2", "label": "ti-pjl2" },
-        { "value": "tu-pfl2", "label": "tu-pfl2" },
-        { "value": "tu-pjl2", "label": "tu-pjl2" },
-        { "value": "prod-pfl2", "label": "prod-pfl2" },
-        { "value": "prod-pjl2", "label": "prod-pjl2" },
-        { "value": "ha-pfl2", "label": "ha-pfl2" },
-        { "value": "ha-pjl2", "label": "ha-pjl2" },
+        { "value": "dev-customer", "label": "dev-customer" },
+        { "value": "th-customer", "label": "th-customer" },
+        { "value": "th-company", "label": "th-company" },
+        { "value": "ti-customer", "label": "ti-customer" },
+        { "value": "ti-company", "label": "ti-company" },
+        { "value": "tu-customer", "label": "tu-customer" },
+        { "value": "tu-company", "label": "tu-company" },
+        { "value": "prod-customer", "label": "prod-customer" },
+        { "value": "prod-company", "label": "prod-company" },
+        { "value": "ha-customer", "label": "ha-customer" },
+        { "value": "ha-company", "label": "ha-company" },
         { "value": "prod-corp", "label": "prod-corp" },
         { "value": "ha-corp", "label": "ha-corp" },
-        { "value": "estruturais", "label": "estruturais" }
+        { "value": "structural", "label": "structural" }
       ]
     },
     {
