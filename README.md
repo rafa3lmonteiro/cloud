@@ -1,3 +1,3 @@
 # Cloud
 
-Repository for cloud jobs and projects
+Repository focused on cloud automation projects
