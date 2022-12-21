@@ -61,7 +61,7 @@ provisioner "remote-exec" {
     inline = [
       "cd /opt/ibm-cloud-private-${var.icp-version-path["${var.ambiente}"]}/cluster",
       "kubectl cordon ${phpipam_address.address.ip_address};kubectl drain ${phpipam_address.address.ip_address} --force --delete-local-data --ignore-daemonsets --grace-period 0;sleep 30s;",
-      "sed -i '/^${phpipam_address.address.ip_address}\b/Id' hosts;",
+      "sed -i '/^${phpipam_address.address.ip_address}/Id' hosts;",
       "sleep 7;",
       "kubectl delete node ${phpipam_address.address.ip_address};"
     ]
