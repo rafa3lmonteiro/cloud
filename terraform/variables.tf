@@ -1,8 +1,7 @@
+##############################################################
 # Rafael Conte Monteiro
 # edit 11/03/2022
-# variables.tf file
-##############################################################
-# Keys - CAMC (public/private) & optional User Key (public) 
+# example of variables.tf file
 ##############################################################
 
 variable "ambiente" {
@@ -10,14 +9,10 @@ variable "ambiente" {
     default = "homolog"
     }
 
- 
-
 variable "allow_unverified_ssl" {
   description = "Communication with vsphere server with self signed certificate"
   default     = "true"
 }
-
-#Variable : vm_1_name
 
 #variable "vm_1_name" {
 #  description = "Target vSphere folder for virtual machine"
@@ -29,7 +24,6 @@ variable "vm_1_name" {
 #########################################################
 ##### Resource : vm_1
 #########################################################
-
 
   variable "vm_1_folder" {
   type        = "map"
