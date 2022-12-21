@@ -40,18 +40,18 @@
       "options": [
         { "value": "dev-customer", "label": "dev-customer" },
         { "value": "th-customer", "label": "th-customer" },
-        { "value": "th-company", "label": "th-company" },
+        { "value": "th-acme", "label": "th-acme" },
         { "value": "ti-customer", "label": "ti-customer" },
-        { "value": "ti-company", "label": "ti-company" },
+        { "value": "ti-acme", "label": "ti-acme" },
         { "value": "tu-customer", "label": "tu-customer" },
-        { "value": "tu-company", "label": "tu-company" },
+        { "value": "tu-acme", "label": "tu-acme" },
         { "value": "prod-customer", "label": "prod-customer" },
-        { "value": "prod-company", "label": "prod-company" },
+        { "value": "prod-acme", "label": "prod-acme" },
         { "value": "ha-customer", "label": "ha-customer" },
-        { "value": "ha-company", "label": "ha-company" },
-        { "value": "prod-corp", "label": "prod-corp" },
-        { "value": "ha-corp", "label": "ha-corp" },
-        { "value": "structural", "label": "structural" }
+        { "value": "ha-acme", "label": "ha-acme" },
+        { "value": "prod-corporation", "label": "prod-corporation" },
+        { "value": "ha-corporation", "label": "ha-corporation" },
+        { "value": "infra", "label": "infra" }
       ]
     },
     {
