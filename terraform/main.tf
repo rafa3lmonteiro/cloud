@@ -1,10 +1,12 @@
+##############################################################
 # Rafael Conte Monteiro
-# edit 02/18/2022
-# 
+# edit 11/03/2022
+# example of main.tf file
+##############################################################
 
 provider "phpipam" {
   app_id   = "caminteract"
-  endpoint = "http://10.0.0.115/api"
+  endpoint = "http://172.17.0.150/api"
   password = "suasenha"
   username = "admin"
 }
@@ -18,7 +20,7 @@ resource "phpipam_address" "address" {
   subnet_id   = "${var.Rede_Gerenciamento["${var.ambiente}"]}"
   ip_address  = "${data.phpipam_first_free_address.next_address.ip_address}"
   hostname    = "${var.vm_1_name}"
-  description = "Gerado pelo CAM - Worker"
+  description = "IP Reservado pela Automacao - Worker"
 
   lifecycle {
     ignore_changes = [
@@ -35,7 +37,7 @@ resource "phpipam_address" "workload_address" {
   subnet_id   = "${var.Rede_Workload["${var.ambiente}"]}"
   ip_address  = "${data.phpipam_first_free_address.next_workload_address.ip_address}"
   hostname    = "${var.vm_1_name}"
-  description = "Gerado pelo CAM - Worker"
+  description = "IP Reservado pela Automacao - Worker"
 
   lifecycle {
     ignore_changes = [
@@ -116,8 +118,6 @@ data "vsphere_virtual_machine" "vm_1_template" {
 
 ##### Image Parameters variables #####
 
-
-
 # vsphere vm
 resource "vsphere_virtual_machine" "vm_1" {
   name             = "${var.vm_1_name}"
@@ -188,16 +188,6 @@ resource "vsphere_virtual_machine" "vm_1" {
    
   }
 
-  /*disk {
-  //  name             = "${var.vm_1_name}_2.vmdk"
-    size             = "${data.vsphere_virtual_machine.vm_1_template.disks.2.size}"
-    eagerly_scrub    = "${data.vsphere_virtual_machine.vm_1_template.disks.2.eagerly_scrub}"
-    thin_provisioned = "${data.vsphere_virtual_machine.vm_1_template.disks.2.thin_provisioned}"
-    
-    
-    unit_number      = 2
-   
-  }*/
 
 }
 
@@ -231,7 +221,7 @@ resource "null_resource" "add-remote-sshkey-to-worker" {
   depends_on = ["null_resource.gera-chave-publica"]
   provisioner "remote-exec" {
     connection {
-       host = "10.0.0.200"
+       host = "172.17.0.200"
        user = "root"
        password = "suasenha@"
     }
@@ -267,8 +257,6 @@ depends_on = ["null_resource.add-remote-sshkey-to-worker"]
   }
 }
 
-
-
 resource "null_resource" "run-script-onworker" {
   depends_on = ["null_resource.add-worker"]
   
@@ -280,10 +268,10 @@ resource "null_resource" "run-script-onworker" {
    }
   
     inline = [
-      "mount 10.0.0.200:/admcloud/ /admcloud/",
+      "mount 172.17.0.200:/admcloud/ /admcloud/",
       "/admcloud/scripts/ajusta_rotas.sh",
       "sleep 60 ",
-      "mount 10.0.0.200:/admcloud/ /admcloud/",
+      "mount 172.17.0.200:/admcloud/ /admcloud/",
       "/admcloud/scripts/camworker/workernode_script.sh"
     ]
   }
@@ -293,7 +281,7 @@ resource "null_resource" "registrabdgc" {
   depends_on = ["null_resource.run-script-onworker"]
   provisioner "remote-exec" {
     connection {
-       host = "10.0.0.200"
+       host = "172.17.0.200"
        user = "root"
        password = "suasenha@"
     }
