@@ -1,7 +1,8 @@
-//
-// # Rafael Conte Monteiro
-// # edit 11/15/2022
-// 
+//##############################################################
+//# Rafael Conte Monteiro
+//# edit 11/03/2022
+//# example of index.js file
+//##############################################################
 
 var express = require('express');
 var request = require('request-promise-native');
@@ -13,29 +14,23 @@ var tasks = require('./tasks.js');
 var cam_refresh_interval = 300000;
 
 
-
 var app = express();
 
 app.use(bodyParser.json());
 
 
-var icp_host = "10.0.0.100:8443";
-var cam_host = "10.0.0.110:30000";
+var icp_host = "172.17.0.100:8443";
+var cam_host = "172.17.0.110:30000";
 var cam_user = "admin";
 var cam_password = "suasenha";
-//var cam_refresh_interval = process.env.CAM_REFRESH_CACHE_INTERVAL || 300000
-// e3032294-9f6f-4855-b8a2-a79b61006846 all 00001
-// let tenantId = process.env.CAM_TENANT_ID;
-// let namespaceUid = process.env.CAM_NAMESPACE_UID;
-//
-var tenantId="59003768-38ac-41c8-ad03-614e018ebe0d"
+
+var tenantId="68002664-39ed-42c9-ax03-324c028exe0b"
 app.post('/icp-scale/api/v1/uc1/scale', async function(req, res, next){
     console.log(req.body.title.includes);
      if (req.body.title.includes('Alerting'))
     {
 
     let jsonparsemsg = JSON.parse(req.body.message);
-    //console.log(req.body.message);
     let namespaceUid = jsonparsemsg.cam_namespace;
     let templateName = jsonparsemsg.template_name;
     let cloud_connection = jsonparsemsg.cloud_connection;
@@ -47,7 +42,6 @@ app.post('/icp-scale/api/v1/uc1/scale', async function(req, res, next){
     let token = await camClient.getAuthToken();
     let templateDetails = null;
     let cloudConnectionDetails = null;
-    //console.log(tenantId +"\n\n"+ namespaceUid +"\n\n"+ templateName +"\n\n"+ token);
 
     try {
         console.log("scale-up", "Capturando template pelo nome...");
@@ -65,7 +59,6 @@ app.post('/icp-scale/api/v1/uc1/scale', async function(req, res, next){
     let templateId = templateDetails.id;
     let cloudConnectionId = cloudConnectionDetails.id;
 
-//    let input_parameters = templateDetails.manifest.template.templateVariables.template_input_params
     let input_parameters = jsonparsemsg.template_input_params;
 
     console.log("Get next name available");
@@ -75,7 +68,6 @@ app.post('/icp-scale/api/v1/uc1/scale', async function(req, res, next){
         let allStacks = await camClient.getAllStacks(tenantId, "all", namespaceUid, token);
         stacksize = parseInt(allStacks.length);
 
-            //let stack_id = stackObj.id;
             allStacks.sort();
             let stackObj = allStacks[stacksize-1];
             let name = stackObj.name;
