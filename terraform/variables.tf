@@ -35,20 +35,20 @@ variable "vm_1_name" {
   type        = "map"
   description = "Target vSphere folder for virtual machine"
   default     = {
-        dev-pfl2 = "DV-IC1"
-        th-pfl2 = "HO-IC2"
-        th-pjl2 = "HO-IC2"
-        ti-pfl2 = "TI-IC1"
-        ti-pjl2 = "TI-IC1"
-        tu-pfl2 = "TU-IC1"
-        tu-pjl2 = "TU-IC1"
-        prod-pfl2 = "ICP-PR1"
-        prod-pjl2 = "ICP-PR5PJ"
-        ha-pfl2 = "ICP-HA1"
-        ha-pjl2 = "ICP-HA5PJ"
-        prod-corp = "ICP-PR"
-        ha-corp = "ICP-PR"
-        estruturais = "ES-IC2"
+        dev-customer = "DV-CUSTOMER1"
+        th-customer = "HO-CUSTOMER2"
+        th-acme = "HO-CUSTOMER2"
+        ti-customer = "TI-CUSTOMER1"
+        ti-acme = "TI-CUSTOMER1"
+        tu-customer = "TU-CUSTOMER1"
+        tu-acme = "TU-CUSTOMER1"
+        prod-customer = "ICP-CUSTOMER-PROD1"
+        prod-acme = "ICP-ACME-PROD"
+        ha-customer = "ICP-CUSTOMER-HA1"
+        ha-acme = "ICP-ACME-HA1"
+        prod-corporation = "ICP-CORP-PR"
+        ha-corporation = "ICP-CORP-HA"
+        infra = "INFRA-CUSTOMER2"
   }
 }
 
@@ -56,20 +56,20 @@ variable "vm_1_datacenter" {
   type        = "map"
   description = "Target vSphere datacenter for virtual machine creation"
   default     = {
-        dev-pfl2 = "ALP"
-        th-pfl2 = "ALP"
-        th-pjl2 = "ALP"
-        ti-pfl2 = "ALP"
-        ti-pjl2 = "ALP"
-        tu-pfl2 = "ALP"
-        tu-pjl2 = "ALP"
-        prod-pfl2 = "CTI"
-        prod-pjl2 = "CTI"
-        ha-pfl2 = "CTI"
-        ha-pjl2 = "CTI"
-        prod-corp = "CTI"
-        ha-corp = "CTI"
-        estruturais = "ALP"
+        dev-customer = "DC2"
+        th-customer = "DC2"
+        th-acme = "DC2"
+        ti-customer = "DC2"
+        ti-acme = "DC2"
+        tu-customer = "DC2"
+        tu-acme = "DC2"
+        prod-customer = "DC1"
+        prod-acme = "DC1"
+        ha-customer = "DC1"
+        ha-acme = "DC1"
+        prod-corporation = "DC1"
+        ha-corporation = "DC1"
+        infra = "DC2"
   }
 }
 
@@ -77,27 +77,27 @@ variable "vm_1_domain" {
     type        = "map"
   description = "Domain Name of virtual machine"
   default     = {
-        dev-pfl2 = "homolog.my.cloud"
-        th-pfl2 = "homolog.my.cloud"
-        th-pjl2 = "homolog.my.cloud"
-        ti-pfl2 = "homolog.my.cloud"
-        ti-pjl2 = "homolog.my.cloud"
-        tu-pfl2 = "homolog.my.cloud"
-        tu-pjl2 = "homolog.my.cloud"
-        prod-pfl2 = "producao.my.cloud"
-        prod-pjl2 = "producao.my.cloud"
-        ha-pfl2 = "producao.my.cloud"
-        ha-pjl2 = "producao.my.cloud"
-        prod-corp = "producao.my.cloud"
-        ha-corp =  "producao.my.cloud"
-        estruturais = "homolog.my.cloud"
+        dev-customer = "homolog.my.cloud"
+        th-customer = "homolog.my.cloud"
+        th-acme = "homolog.my.cloud"
+        ti-customer = "homolog.my.cloud"
+        ti-acme = "homolog.my.cloud"
+        tu-customer = "homolog.my.cloud"
+        tu-acme = "homolog.my.cloud"
+        prod-customer = "producao.my.cloud"
+        prod-acme = "producao.my.cloud"
+        ha-customer = "producao.my.cloud"
+        ha-acme = "producao.my.cloud"
+        prod-corporation = "producao.my.cloud"
+        ha-corporation =  "producao.my.cloud"
+        infra = "homolog.my.cloud"
   }
   
 }
 
 variable "vm_1_number_of_vcpu" {
   description = "Number of virtual CPU for the virtual machine, which is required to be a positive Integer"
-  default     = "12"
+  default     = "20"
 }
 
 variable "vm_1_memory" {
@@ -109,20 +109,20 @@ variable "vm_1_cluster" {
   description = "Target vSphere cluster to host the virtual machine"
   type        = "map"
   default     = {
-        dev-pfl2 = "HOMOLOGACAO-ALP"
-        th-pfl2 = "HOMOLOGACAO-ALP"
-        th-pjl2 = "HOMOLOGACAO-ALP"
-        ti-pfl2 = "HOMOLOGACAO-ALP"
-        ti-pjl2 = "HOMOLOGACAO-ALP"
-        tu-pfl2 = "HOMOLOGACAO-ALP"
-        tu-pjl2 = "HOMOLOGACAO-ALP"
-        prod-pfl2 = "PRODUCAO-CTI"
-        prod-pjl2 = "PRODUCAO-CTI"
-        ha-pfl2 = "PRODUCAO-HA"
-        ha-pjl2 = "PRODUCAO-HA"
-        prod-corp = "PRODUCAO-CTI"
-        ha-corp = "PRODUCAO-HA"
-        estruturais = "HOMOLOGACAO-ALP"
+        dev-customer = "HOMOLOGACAO-DC2"
+        th-customer = "HOMOLOGACAO-DC2"
+        th-acme = "HOMOLOGACAO-DC2"
+        ti-customer = "HOMOLOGACAO-DC2"
+        ti-acme = "HOMOLOGACAO-DC2"
+        tu-customer = "HOMOLOGACAO-DC2"
+        tu-acme = "HOMOLOGACAO-DC2"
+        prod-customer = "PRODUCAO-DC1"
+        prod-acme = "PRODUCAO-DC1"
+        ha-customer = "PRODUCAO-HA"
+        ha-acme = "PRODUCAO-HA"
+        prod-corporation = "PRODUCAO-DC1"
+        ha-corporation = "PRODUCAO-HA"
+        infra = "HOMOLOGACAO-DC2"
 
   }
 }
@@ -132,20 +132,20 @@ variable "vm_1_dns_suffixes" {
     description = "Name resolution suffixes for the virtual network adapter"
     type        = "map"
     default     = {
-        dev-pfl2 = ["homolog.my.cloud"]
-        th-pfl2 = ["homolog.my.cloud"]
-        th-pjl2 = ["homolog.my.cloud"]
-        ti-pfl2 = ["homolog.my.cloud"]
-        ti-pjl2 = ["homolog.my.cloud"]
-        tu-pfl2 = ["homolog.my.cloud"]
-        tu-pjl2 = ["homolog.my.cloud"]
-        prod-pfl2 = ["producao.my.cloud"]
-        prod-pjl2 = ["producao.my.cloud"]
-        ha-pfl2 = ["producao.my.cloud"]
-        ha-pjl2 = ["producao.my.cloud"]
-        prod-corp = ["producao.my.cloud"]
-        ha-corp = ["producao.my.cloud"]
-        estruturais =  ["homolog.my.cloud"]
+        dev-customer = ["homolog.my.cloud"]
+        th-customer = ["homolog.my.cloud"]
+        th-acme = ["homolog.my.cloud"]
+        ti-customer = ["homolog.my.cloud"]
+        ti-acme = ["homolog.my.cloud"]
+        tu-customer = ["homolog.my.cloud"]
+        tu-acme = ["homolog.my.cloud"]
+        prod-customer = ["producao.my.cloud"]
+        prod-acme = ["producao.my.cloud"]
+        ha-customer = ["producao.my.cloud"]
+        ha-acme = ["producao.my.cloud"]
+        prod-corporation = ["producao.my.cloud"]
+        ha-corporation = ["producao.my.cloud"]
+        infra =  ["homolog.my.cloud"]
   }
   
 }
@@ -154,20 +154,20 @@ variable "vm_1_dns_servers" {
     description = "DNS servers for the virtual network adapter"
     type        = "map"
     default     = {
-        dev-pfl2 = ["10.191.199.20","10.191.199.21"]
-        th-pfl2 = ["10.191.199.20","10.191.199.21"]
-        th-pjl2 = ["10.191.199.20","10.191.199.21"]
-        ti-pfl2 = ["10.191.199.20","10.191.199.21"]
-        ti-pjl2 = ["10.191.199.20","10.191.199.21"]
-        tu-pfl2 = ["10.191.199.20","10.191.199.21"]
-        tu-pjl2 = ["10.191.199.20","10.191.199.21"]
-        prod-pfl2 = ["10.199.103.59","10.199.103.60"]
-        prod-pjl2 = ["10.199.103.59","10.199.103.60"]
-        ha-pfl2 = ["10.199.103.59","10.199.103.60"]
-        ha-pjl2 = ["10.199.103.59","10.199.103.60"]
-        prod-corp = ["10.199.103.59","10.199.103.60"]
-        ha-corp = ["10.199.103.59","10.199.103.60"]
-        estruturais = ["10.191.199.20","10.191.199.21"]
+        dev-customer = ["172.17.0.10","172.17.0.11"]
+        th-customer = ["172.17.0.10","172.17.0.11"]
+        th-acme = ["172.17.0.10","172.17.0.11"]
+        ti-customer = ["172.17.0.10","172.17.0.11"]
+        ti-acme = ["172.17.0.10","172.17.0.11"]
+        tu-customer = ["172.17.0.10","172.17.0.11"]
+        tu-acme = ["172.17.0.10","172.17.0.11"]
+        prod-customer = ["172.17.0.12","172.17.0.13"]
+        prod-acme = ["172.17.0.12","172.17.0.13"]
+        ha-customer = ["172.17.0.12","172.17.0.13"]
+        ha-acme = ["172.17.0.12","172.17.0.13"]
+        prod-corporation = ["172.17.0.12","172.17.0.13"]
+        ha-corporation = ["172.17.0.12","172.17.0.13"]
+        infra = ["172.17.0.10","172.17.0.11"]
   }
 
   
@@ -179,20 +179,20 @@ variable "icp-version-path" {
   description = "vSphere port group or network label for virtual machine's vNIC"
   type        = "map"
     default     = {
-        dev-pfl2 = "3.1.1"
-        th-pfl2 = "3.1.1"
-        th-pjl2 = "3.1.1"
-        ti-pfl2 = "3.1.1"
-        ti-pjl2 = "3.1.1"
-        tu-pfl2 = "3.1.1"
-        tu-pjl2 = "3.1.1"
-        prod-pfl2 = "3.1.1"
-        prod-pjl2 = "3.1.1"
-        ha-pfl2 = "3.1.1"
-        ha-pjl2 = "3.1.1"
-        prod-corp = "3.1.2"
-        ha-corp = "3.1.2"
-        estruturais = "3.1.1"
+        dev-customer = "3.1.1"
+        th-customer = "3.1.1"
+        th-acme = "3.1.1"
+        ti-customer = "3.1.1"
+        ti-acme = "3.1.1"
+        tu-customer = "3.1.1"
+        tu-acme = "3.1.1"
+        prod-customer = "3.1.1"
+        prod-acme = "3.1.1"
+        ha-customer = "3.1.1"
+        ha-acme = "3.1.1"
+        prod-corporation = "3.1.2"
+        ha-corporation = "3.1.2"
+        infra = "3.1.1"
   }
 }
 
@@ -200,20 +200,20 @@ variable "vm_1_network_workload" {
   description = "vSphere port group or network label for virtual machine's vNIC"
    type        = "map"
     default     = {
-        dev-pfl2 = "vxw-dvs-83-virtualwire-7-sid-80007-LS_CORPTUTI01_10.191.5.0"
-        th-pfl2 = "vxw-dvs-83-virtualwire-6-sid-80006-LS_INETHOMC2_10.191.1.0"
-        th-pjl2 = "vxw-dvs-83-virtualwire-6-sid-80006-LS_INETHOMC2_10.191.1.0"
-        ti-pfl2 = "vxw-dvs-83-virtualwire-7-sid-80007-LS_CORPTUTI01_10.191.5.0"
-        ti-pjl2 = "vxw-dvs-83-virtualwire-7-sid-80007-LS_CORPTUTI01_10.191.5.0"
-        tu-pfl2 = "vxw-dvs-83-virtualwire-7-sid-80007-LS_CORPTUTI01_10.191.5.0"
-        tu-pjl2 = "vxw-dvs-83-virtualwire-7-sid-80007-LS_CORPTUTI01_10.191.5.0"
-        prod-pfl2 = "vxw-dvs-82-universalwire-13-sid-10012-LS_PFC2_10.191.226.0"
-        prod-pjl2 = "vxw-dvs-82-universalwire-33-sid-10032-LS_PJC2_10.232.202.0_23"
-        ha-pfl2 = "vxw-dvs-801-universalwire-13-sid-10012-LS_PFC2_10.191.226.0"
-        ha-pjl2 = "vxw-dvs-801-universalwire-33-sid-10032-LS_PJC2_10.232.202.0_23"
-        prod-corp = "vxw-dvs-82-universalwire-39-sid-10038-LS_CORP_10.222.42.0_23"
-        ha-corp = "vxw-dvs-801-universalwire-39-sid-10038-LS_CORP_10.222.42.0_23"
-        estruturais = "vxw-dvs-83-virtualwire-7-sid-80007-LS_CORPTUTI01_10.191.5.0"
+        dev-customer = "vxw-dvs-83-virtualwire-1"
+        th-customer = "vxw-dvs-83-virtualwire-2"
+        th-acme = "vxw-dvs-83-virtualwire-2"
+        ti-customer = "vxw-dvs-83-virtualwire-1"
+        ti-acme = "vxw-dvs-83-virtualwire-1"
+        tu-customer = "vxw-dvs-83-virtualwire-1"
+        tu-acme = "vxw-dvs-83-virtualwire-1"
+        prod-customer = "vxw-dvs-83-virtualwire-3"
+        prod-acme = "vxw-dvs-83-virtualwire-4"
+        ha-customer = "vxw-dvs-83-virtualwire-5"
+        ha-acme = "vxw-dvs-83-virtualwire-6"
+        prod-corporation = "vxw-dvs-83-virtualwire-7"
+        ha-corporation = "vxw-dvs-83-virtualwire-8"
+        infra = "vxw-dvs-83-virtualwire-1"
   }
 }
 
@@ -223,20 +223,20 @@ variable "Rede_Workload" {
   description = "Numero da rede de WorkLoad pelo PHPIPAM"
      type        = "map"
     default     = {
-        dev-pfl2 = "21"
-        th-pfl2 = "22"
-        th-pjl2 = "22"
-        ti-pfl2 = "21"
-        ti-pjl2 = "22"
-        tu-pfl2 = "21"
-        tu-pjl2 = "22"
-        prod-pfl2 = "20"
-        prod-pjl2 = "63"
-        ha-pfl2 = "20"
-        ha-pjl2 = "63"
-        prod-corp = "70"
-        ha-corp = "70"
-        estruturais = "21"
+        dev-customer = "10"
+        th-customer = "11"
+        th-acme = "11"
+        ti-customer = "10"
+        ti-acme = "11"
+        tu-customer = "10"
+        tu-acme = "11"
+        prod-customer = "14"
+        prod-acme = "13"
+        ha-customer = "14"
+        ha-acme = "13"
+        prod-corporation = "15"
+        ha-corporation = "15"
+        infra = "10"
   }
 }
 
@@ -244,40 +244,40 @@ variable "vm_1_ipv4_gateway" {
      type        = "map"
   description = "IPv4 gateway for vNIC configuration"
   default     = {
-        dev-pfl2 = "10.191.205.1"
-        th-pfl2 = "10.191.205.1"
-        th-pjl2 = "10.191.26.1"
-        ti-pfl2 = "10.191.205.1"
-        ti-pjl2 = "10.191.205.1"
-        tu-pfl2 = "10.191.205.1"
-        tu-pjl2 = "10.191.205.1"
-        prod-pfl2 = "10.199.109.1"
-        prod-pjl2 = "10.199.109.1"
-        ha-pfl2 = "10.199.109.1"
-        ha-pjl2 = "10.199.109.1"
-        prod-corp = "10.222.44.1"
-        ha-corp = "10.222.44.1"
-        estruturais = "10.191.205.1"
+        dev-customer = "172.17.0.1"
+        th-customer = "172.17.0.1"
+        th-acme = "10.191.26.1"
+        ti-customer = "172.17.0.1"
+        ti-acme = "172.17.0.1"
+        tu-customer = "172.17.0.1"
+        tu-acme = "172.17.0.1"
+        prod-customer = "172.17.10.1"
+        prod-acme = "172.17.10.1"
+        ha-customer = "172.17.10.1"
+        ha-acme = "172.17.10.1"
+        prod-corporation = "172.17.20.1"
+        ha-corporation = "172.17.20.1"
+        infra = "172.17.0.1"
   }
 }
 
 variable "vm_1_ipv4_prefix_length_management" {
   description = "IPv4 prefix length for vNIC configuration. The value must be a number between 8 and 32"
   default = {
-        dev-pfl2 = "24"
-        th-pfl2 = "24"
-        th-pjl2 = "24"
-        ti-pfl2 = "24"
-        ti-pjl2 = "24"
-        tu-pfl2 = "24"
-        tu-pjl2 = "24"
-        prod-pfl2 = "24"
-        prod-pjl2 = "24"
-        ha-pfl2 = "24"
-        ha-pjl2 = "24"
-        prod-corp = "23"
-        ha-corp = "23"
-        estruturais = "24"
+        dev-customer = "24"
+        th-customer = "24"
+        th-acme = "24"
+        ti-customer = "24"
+        ti-acme = "24"
+        tu-customer = "24"
+        tu-acme = "24"
+        prod-customer = "24"
+        prod-acme = "24"
+        ha-customer = "24"
+        ha-acme = "24"
+        prod-corporation = "23"
+        ha-corporation = "23"
+        infra = "24"
   }
 }
 
@@ -289,20 +289,20 @@ variable "vm_1_datastore_cluster" {
   description = "Data store or storage cluster name for target virtual machine's disks"
   type        = "map"
   default     = {
-        dev-pfl2 = "ALP-DS-L-HM"
-        th-pfl2 = "ALP-DS-L-HM"
-        th-pjl2 = "ALP-DS-L-HM"
-        ti-pfl2 = "ALP-DS-L-HM"
-        ti-pjl2 = "ALP-DS-L-HM"
-        tu-pfl2 = "ALP-DS-L-HM"
-        tu-pjl2 = "ALP-DS-L-HM"
-        prod-pfl2 = "CTI-CLDS-TIER-1"
-        prod-pjl2 = "CTI-CLDS-TIER-1"
-        ha-pfl2 = "ALP-T2-L-PRD"
-        ha-pjl2 = "ALP-T2-L-PRD"
-        prod-corp = "CTI-CLDS-TIER-1"
-        ha-corp = "ALP-T2-L-PRD"
-        estruturais = "ALP-DS-L-HM"
+        dev-customer = "DC2-DS-L-HM"
+        th-customer = "DC2-DS-L-HM"
+        th-acme = "DC2-DS-L-HM"
+        ti-customer = "DC2-DS-L-HM"
+        ti-acme = "DC2-DS-L-HM"
+        tu-customer = "DC2-DS-L-HM"
+        tu-acme = "DC2-DS-L-HM"
+        prod-customer = "DC1-CLDS-TIER-1"
+        prod-acme = "DC1-CLDS-TIER-1"
+        ha-customer = "DC2-T2-L-PRD"
+        ha-acme = "DC2-T2-L-PRD"
+        prod-corporation = "DC1-CLDS-TIER-1"
+        ha-corporation = "DC2-T2-L-PRD"
+        infra = "DC2-DS-L-HM"
   }
 }
 
@@ -324,20 +324,20 @@ variable "Rede_Gerenciamento" {
   description = "Numero da rede de Gerenciamento pelo PHPIPAM"
    type        = "map"
     default     = {
-        dev-pfl2 = "12"
-        th-pfl2 = "12"
-        th-pjl2 = "64"
-        ti-pfl2 = "12"
-        ti-pjl2 = "64"
-        tu-pfl2 = "12"
-        tu-pjl2 = "64"
-        prod-pfl2 = "18"
-        prod-pjl2 = "18"
-        ha-pfl2 = "18"
-        ha-pjl2 = "18"
-        prod-corp = "67"
-        ha-corp = "67"
-        estruturais = "12"
+        dev-customer = "20"
+        th-customer = "20"
+        th-acme = "21"
+        ti-customer = "20"
+        ti-acme = "21"
+        tu-customer = "20"
+        tu-acme = "21"
+        prod-customer = "22"
+        prod-acme = "22"
+        ha-customer = "22"
+        ha-acme = "22"
+        prod-corporation = "23"
+        ha-corporation = "23"
+        infra = "20"
   }
 }
 
@@ -346,23 +346,22 @@ variable "IP_Icp_Bootnode" {
     description = "IP do ICP BootNode a ser provisionado"
     type        = "map"
     default     = {
-        dev-pfl2 = "10.191.205.111"
-        th-pfl2 = "10.191.205.191"
-        th-pjl2 = "10.191.26.11"
-        ti-pfl2 = "10.191.205.174"
-        ti-pjl2 = "10.191.26.51"
-        tu-pfl2 = "10.191.205.138"
-        tu-pjl2 = "10.191.26.44"
-        prod-pfl2 = "10.199.109.47"
-        prod-pjl2 = "10.199.109.224"
-        ha-pfl2 = "10.199.109.102"
-        ha-pjl2 = "10.199.109.31"
-        prod-corp = "10.222.44.12"
-        ha-corp = "10.222.44.31"
-        estruturais = "10.191.205.31"
+        dev-customer = "172.17.0.111"
+        th-customer = "172.17.0.191"
+        th-acme = "172.17.0.112"
+        ti-customer = "172.17.0.174"
+        ti-acme = "172.17.0.113"
+        tu-customer = "172.17.0.138"
+        tu-acme = "172.17.0.114"
+        prod-customer = "172.17.0.115"
+        prod-acme = "172.17.0.116"
+        ha-customer = "172.17.10.102"
+        ha-acme = "172.17.0.117"
+        prod-corporation = "172.17.20.12"
+        ha-corporation = "172.17.0.118"
+        infra = "172.17.0.119"
   }
-  
-  
+   
 }
 
 
@@ -370,20 +369,20 @@ variable "vm_1-image" {
   description = "Operating system image id / template that should be used when creating the virtual image"
   type        = "map"
   default     = {
-        dev-pfl2 = "TEMPLATE_ICP311_CAM160"
-        th-pfl2 = "TEMPLATE_ICP311_CAM160"
-        th-pjl2 = "TEMPLATE_ICP311_CAM160"
-        ti-pfl2 = "TEMPLATE_ICP311_CAM160"
-        ti-pjl2 = "TEMPLATE_ICP311_CAM160"
-        tu-pfl2 = "TEMPLATE_ICP311_CAM160"
-        tu-pjl2 = "TEMPLATE_ICP311_CAM160"
-        prod-pfl2 = "TEMPLATE_ICP311_CAM160_PR"
-        prod-pjl2 = "TEMPLATE_ICP311_CAM160_PR"
-        ha-pfl2 = "TEMPLATE_ICP311_CAM160_PRHA"
-        ha-pjl2 = "TEMPLATE_ICP311_CAM160_PRHA"
-        prod-corp = "TEMPLATE_ICP311_CAM160_PR"
-        ha-corp = "TEMPLATE_ICP311_CAM160_PRHA"
-        estruturais = "TEMPLATE_ICP311_CAM160"
+        dev-customer = "TEMPLATE_CAM_ICP311"
+        th-customer = "TEMPLATE_CAM_ICP311"
+        th-acme = "TEMPLATE_CAM_ICP311"
+        ti-customer = "TEMPLATE_CAM_ICP311"
+        ti-acme = "TEMPLATE_CAM_ICP311"
+        tu-customer = "TEMPLATE_CAM_ICP311"
+        tu-acme = "TEMPLATE_CAM_ICP311"
+        prod-customer = "TEMPLATE_CAM_ICP311_PROD"
+        prod-acme = "TEMPLATE_CAM_ICP311_PROD"
+        ha-customer = "TEMPLATE_CAM_ICP311_PRODHA"
+        ha-acme = "TEMPLATE_CAM_ICP311_PRODHA"
+        prod-corporation = "TEMPLATE_CAM_ICP311_PROD"
+        ha-corporation = "TEMPLATE_CAM_ICP311_PRODHA"
+        infra = "TEMPLATE_CAM_ICP311"
   }
 }
 
@@ -391,20 +390,20 @@ variable "vm_1_network_gerenciamento" {
   description = "vSphere port group or network label for virtual machine's vNIC"
   type        = "map"
     default     = {
-        dev-pfl2 = "PG-ALP-HOM-MGMT"
-        th-pfl2 = "PG-ALP-HOM-MGMT"
-        th-pjl2 = "PG-ALP-HOM-26"
-        ti-pfl2 = "PG-ALP-HOM-MGMT"
-        ti-pjl2 = "PG-ALP-HOM-MGMT"
-        tu-pfl2 = "PG-ALP-HOM-MGMT"
-        tu-pjl2 = "PG-ALP-HOM-26"
-        prod-pfl2 = "PG-CTI-MGMT"
-        prod-pjl2 = "PG-CTI-MGMT"
-        ha-pfl2 = "PG-CTI-MGMT"
-        ha-pjl2 = "PG-CTI-MGMT"
-        prod-corp = "PG-CTI-MGMT-CORP"
-        ha-corp = "PG-CTI-MGMT-CORP"
-        estruturais = "PG-ALP-HOM-MGMT"
+        dev-customer = "PG-DC2-HOM-MGMT"
+        th-customer = "PG-DC2-HOM-MGMT"
+        th-acme = "PG-DC2-HOM-26"
+        ti-customer = "PG-DC2-HOM-MGMT"
+        ti-acme = "PG-DC2-HOM-MGMT"
+        tu-customer = "PG-DC2-HOM-MGMT"
+        tu-acme = "PG-DC2-HOM-26"
+        prod-customer = "PG-DC1-MGMT"
+        prod-acme = "PG-DC1-MGMT"
+        ha-customer = "PG-DC1-MGMT"
+        ha-acme = "PG-DC1-MGMT"
+        prod-corporation = "PG-DC1-MGMT-corporation"
+        ha-corporation = "PG-DC1-MGMT-corporation"
+        infra = "PG-DC2-HOM-MGMT"
   }
 }
 
@@ -412,20 +411,20 @@ variable "vm_1_ipv4_prefix_length_workload" {
       type        = "map"
   description = "IPv4 prefix length for vNIC configuration. The value must be a number between 8 and 32"
   default     = {
-        dev-pfl2 = "24"
-        th-pfl2 = "24"
-        th-pjl2 = "24"
-        ti-pfl2 = "24"
-        ti-pjl2 = "24"
-        tu-pfl2 = "24"
-        tu-pjl2 = "24"
-        prod-pfl2 = "23"
-        prod-pjl2 = "23"
-        ha-pfl2 = "23"
-        ha-pjl2 = "23"
-        prod-corp = "23"
-        ha-corp = "23"
-        estruturais = "24"
+        dev-customer = "24"
+        th-customer = "24"
+        th-acme = "24"
+        ti-customer = "24"
+        ti-acme = "24"
+        tu-customer = "24"
+        tu-acme = "24"
+        prod-customer = "23"
+        prod-acme = "23"
+        ha-customer = "23"
+        ha-acme = "23"
+        prod-corporation = "23"
+        ha-corporation = "23"
+        infra = "24"
   }
   
 }
@@ -447,20 +446,20 @@ variable "vm_1_resource_pool" {
   type        = "map"
   description = "Target vSphere Resource Pool to host the virtual machine"
   default     = {
-        dev-pfl2 = "ICP-DV"
-        th-pfl2 = "ICP-HOM-PF"
-        th-pjl2 = "ICP-HOM-PJ"
-        ti-pfl2 = "ICP-TI"
-        ti-pjl2 = "ICP-TI"
-        tu-pfl2 = "ICP-TU"
-        tu-pjl2 = "ICP-TU"
-        prod-pfl2 = "ICP-PR1"
-        prod-pjl2 = "ICPPR5PJ"
-        ha-pfl2 = "ICP-HA1"
-        ha-pjl2 = "ICP-HA5PJ"
-        prod-corp = "ICP-PRO"
-        ha-corp = "ICP-PR"
-        estruturais = "ICP-ES"
+        dev-customer = "DEV"
+        th-customer = "HOM-CUSTOMER"
+        th-acme = "HOM-ACME"
+        ti-customer = "TI-CUSTOMER"
+        ti-acme = "TI-ACME"
+        tu-customer = "TU-CUSTOMER"
+        tu-acme = "TU-ACME"
+        prod-customer = "CUSTOMER-PROD"
+        prod-acme = "ACME-PROD"
+        ha-customer = "CUSTOMER-HA"
+        ha-acme = "ACME-HA"
+        prod-corporation = "CORPORATION-PROD"
+        ha-corporation = "CORPORATION-HA"
+        infra = "INFRA"
         
   }
   
