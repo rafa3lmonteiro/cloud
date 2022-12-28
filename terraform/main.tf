@@ -47,7 +47,6 @@ resource "phpipam_address" "workload_address" {
   }
 }
 
-
 resource "null_resource" "remove-worker" {
   
 provisioner "remote-exec" {
@@ -67,7 +66,6 @@ provisioner "remote-exec" {
     ]
   }
 }
-
 
 
 ##############################################################
