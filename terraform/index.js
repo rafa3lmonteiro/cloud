@@ -13,7 +13,6 @@ var util   = require('./util.js');
 var tasks = require('./tasks.js');
 var cam_refresh_interval = 300000;
 
-
 var app = express();
 
 app.use(bodyParser.json());
@@ -118,7 +117,6 @@ app.post('/icp-scale/api/v1/uc2/changenamespace', async function(req, res, next)
 
 
 })
-
 
 
 app.post('/icp-scale/api/v1/uc2/deletaservidor', async function(req, res, next){
