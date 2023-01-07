@@ -1,7 +1,7 @@
 ##############################################################
-# Rafael Conte Monteiro
+# 
 # edit 11/03/2022
-# example of variables.tf file
+# variables.tf file
 ##############################################################
 
 variable "ambiente" {
