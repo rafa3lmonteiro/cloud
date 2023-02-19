@@ -86,7 +86,6 @@ variable "vm_1_domain" {
         ha-corporation =  "producao.my.cloud"
         infra = "homolog.my.cloud"
   }
-  
 }
 
 variable "vm_1_number_of_vcpu" {
@@ -117,7 +116,6 @@ variable "vm_1_cluster" {
         prod-corporation = "PRODUCAO-DC1"
         ha-corporation = "PRODUCAO-HA"
         infra = "HOMOLOGACAO-DC2"
-
   }
 }
 
@@ -140,8 +138,7 @@ variable "vm_1_dns_suffixes" {
         prod-corporation = ["producao.my.cloud"]
         ha-corporation = ["producao.my.cloud"]
         infra =  ["homolog.my.cloud"]
-  }
-  
+  } 
 }
 
 variable "vm_1_dns_servers" {
@@ -163,9 +160,6 @@ variable "vm_1_dns_servers" {
         ha-corporation = ["172.17.0.12","172.17.0.13"]
         infra = ["172.17.0.10","172.17.0.11"]
   }
-
-  
-  
 }
 
 
@@ -210,7 +204,6 @@ variable "vm_1_network_workload" {
         infra = "vxw-dvs-83-virtualwire-1"
   }
 }
-
 
 
 variable "Rede_Workload" {
@@ -355,7 +348,6 @@ variable "IP_Icp_Bootnode" {
         ha-corporation = "172.17.0.118"
         infra = "172.17.0.119"
   }
-   
 }
 
 
@@ -420,7 +412,6 @@ variable "vm_1_ipv4_prefix_length_workload" {
         ha-corporation = "23"
         infra = "24"
   }
-  
 }
 
 
@@ -456,5 +447,4 @@ variable "vm_1_resource_pool" {
         infra = "INFRA"
         
   }
-  
 }
