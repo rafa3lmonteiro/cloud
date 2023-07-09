@@ -1,3 +1,3 @@
 # Cloud automation
 
-Repository for studies and projects of automations in Cloud.
+Repository for ideas, studies and projects of automations in Cloud.
